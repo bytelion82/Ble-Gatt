@@ -1,41 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.android.iris.bleperipheral_test.AdvertiseActivity"
-    tools:layout_editor_absoluteX="8dp"
-    tools:layout_editor_absoluteY="8dp">
+    tools:context=".AdvertiseActivity"
+    android:background="@color/colorPrimary"
+    android:weightSum="1">
 
 
-    <Button
-        android:id="@+id/btn_Advertise"
+    <!--<EditText-->
+    <!--android:id="@+id/editTextWifiName"-->
+    <!--android:layout_width="401dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:ems="10"-->
+    <!--android:inputType="date|textShortMessage|textLongMessage|textPersonName|textCapWords|phone|textCapCharacters|textWebPassword"-->
+    <!--android:hint="请输入WiFi名称"-->
+    <!--/>-->
+
+
+
+
+    <!--<EditText-->
+    <!--android:id="@+id/editTextWifiPassword"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:ems="10"-->
+    <!--android:inputType="date|textShortMessage|textLongMessage|textPersonName|textCapWords|phone|textCapCharacters|textWebPassword"-->
+    <!--android:hint="请输入WiFi密码"-->
+    <!--/>-->
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="274dp"
+        android:layout_height="31dp"
+        android:layout_weight="0.13">
+
+        <TextView
+            android:text="名字："
+            android:layout_width="52dp"
+            android:layout_height="31dp"
+            android:textAlignment="viewEnd" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="请输入WiFi名称"
+            android:text="Xiaomi_C5A8"
+            android:id="@+id/editTextWifiName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="279dp"
+        android:layout_height="36dp"
+        android:layout_weight="0.36">
+
+        <TextView
+            android:text="密码："
+            android:layout_width="53dp"
+            android:layout_height="33dp"
+            android:textAlignment="textEnd" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:hint="请输入WiFi密码"
+            android:id="@+id/editTextWifiPassword"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="315dp"
+        android:layout_height="55dp"
+        android:weightSum="1"
+        android:layout_weight="0.51">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="162dp"
+            android:text="蓝牙发送结果："
+            android:textAlignment="center" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="null"
+            android:id="@+id/send_result"
+            android:layout_weight="1.49" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
-        android:text="发送" />
+        android:layout_height="102dp"
+        android:layout_weight="0.08">
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="69dp"
+            android:inputType="textPersonName"
+            android:text="蓝牙连接状态："
+            android:ems="10"
+            />
+
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="未连接"
+            android:ems="10"
+            android:id="@+id/connectStatus"
+            android:layout_weight="0.31" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="date|textShortMessage|textLongMessage|textPersonName|textCapWords|phone|textCapCharacters|textWebPassword"
-        android:text="WiFi名称" />
+        android:layout_height="107dp">
 
-    <EditText
-        android:id="@+id/editTextTextPassword2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword" />
+        <EditText
+            android:layout_width="69dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText4"
+            android:layout_weight="0.02" />
 
-    <TextView
-        android:id="@+id/txt_Data"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="advertise data" />
+        <Button
+            android:id="@+id/btn_Advertise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="发送"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:fontFamily="sans-serif"
+            android:textSize="34sp"
+            android:layout_alignParentLeft="true"
+            android:layout_weight="0.05" />
+
+        <EditText
+            android:layout_width="127dp"
+            android:layout_height="52dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText5" />
+    </LinearLayout>
 
 </LinearLayout>
